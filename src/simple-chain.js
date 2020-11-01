@@ -29,7 +29,7 @@ const chainMaker = {
     if (this.myChain.length > 0) {
       let resultingChain = '';
       this.myChain.forEach((part, partIndex) => {
-        resultingChain += ( ${part} )~~;
+        resultingChain += `( ${part} )~~`;
         if (partIndex == this.myChain.length - 1) {
           resultingChain = resultingChain.substring(0, resultingChain.length - 2)
         }
