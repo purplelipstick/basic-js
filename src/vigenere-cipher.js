@@ -12,7 +12,7 @@ class VigenereCipheringMachine {
   encrypt(message, key) {
     let result = '';
     if (message === undefined || key === undefined) {
-      throw new CustomError
+      throw new Error
     }
     let uppercasedMessage = message.toUpperCase();
     let uppercasedKey = key.toUpperCase();
@@ -44,12 +44,9 @@ class VigenereCipheringMachine {
   }    
   decrypt(message, key) {
     if (message === undefined || key === undefined) {
-      throw new CustomError
+      throw new Error
     }
     let result = '';
-    if (message === undefined || key === undefined) {
-      throw new CustomError
-    }
     let uppercasedMessage = message.toUpperCase();
     let uppercasedKey = key.toUpperCase();
     let lettersToDecrypt = uppercasedMessage.match(/[A-Z]/g);
